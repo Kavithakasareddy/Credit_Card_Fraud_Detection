@@ -6,6 +6,13 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score
 
+data = pd.read_csv("dataset/creditcard.csv")
+
+st.set_page_config(
+    page_title="Credit Card Fraud Detection",
+    page_icon="💳"
+)
+
 st.set_page_config(
     page_title="Credit Card Fraud Detection",
     page_icon="💳"
@@ -112,4 +119,3 @@ if st.button("🚨 Check Transaction"):
             round(fraud_probability, 2),
             "%"
         )
-        
